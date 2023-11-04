@@ -1335,7 +1335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soldierToClone: {fileID: 256273397810798250}
-  numberOfClones: 20000
+  numberOfClones: 30000
   xrange: 200
   zrange: 15
 --- !u!1 &2081826371
