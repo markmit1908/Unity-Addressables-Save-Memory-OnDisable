@@ -1450,6 +1450,7 @@ GameObject:
   - component: {fileID: 256273397810798251}
   - component: {fileID: 574063258798755535}
   - component: {fileID: 9139450400348365375}
+  - component: {fileID: 256273397810798252}
   m_Layer: 0
   m_Name: SoldierMesh
   m_TagString: Untagged
@@ -1471,6 +1472,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meshRenderer: {fileID: 9139450400348365375}
   meshFilter: {fileID: 574063258798755535}
+  meshCollider: {fileID: 256273397810798252}
   meshReference:
     m_AssetGUID: 1be9ba848ab8afe4293685ca720f3a75
     m_SubObjectName: default
@@ -1483,6 +1485,20 @@ MonoBehaviour:
     m_SubObjectName: 
   manageMeshModel: 1
   manageMeshMaterials: 1
+--- !u!64 &256273397810798252
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256273397810798250}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!33 &574063258798755535
 MeshFilter:
   m_ObjectHideFlags: 0

@@ -22,6 +22,8 @@ public class Mesh_ManageMemoryLifecycle : MonoBehaviour
 {
     [SerializeField] private MeshRenderer meshRenderer = null;
     [SerializeField] private MeshFilter meshFilter = null;
+    [SerializeField] private MeshCollider meshCollider = null;
+    
     [SerializeField] private AssetReferenceMesh meshReference = null;
     [SerializeField] private List<AssetReferenceMaterial> materialReferences = null;
     [SerializeField] private bool manageMeshModel = false;
@@ -46,6 +48,7 @@ public class Mesh_ManageMemoryLifecycle : MonoBehaviour
         if (manageMeshModel)
         {
             meshReference.LoadAssetAsync<Mesh>().Completed += handle => meshFilter.sharedMesh = handle.Result;
+            meshCollider.sharedMesh = meshFilter.sharedMesh ;
         }
 
         if (manageMeshMaterials)
@@ -66,6 +69,7 @@ public class Mesh_ManageMemoryLifecycle : MonoBehaviour
         {
             var model = meshFilter.sharedMesh;
             meshFilter.sharedMesh = null;
+            meshCollider.sharedMesh = null;
             Addressables.Release(model);
         }
 
